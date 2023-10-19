@@ -18,7 +18,6 @@ const FormComponent = () => {
         "https://www.colr.org/json/colors/random/10"
       );
       setColors(data.colors);
-      console.log(colors);
     };
     getColors();
   }, []);

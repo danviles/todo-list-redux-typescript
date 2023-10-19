@@ -1,10 +1,10 @@
 import { useAppDispatch } from "../hooks/redux";
-import { Todo } from "../redux/slices/todos";
+import { TodoState } from "../redux/slices/todos";
 import { deleteTodo } from "../redux/slices/todos";
 import Swal from 'sweetalert2'
 
 interface Props {
-  todo: Todo
+  todo: TodoState
 }
 
 const TodoItemComponent = ({ todo }: Props) => {
@@ -33,7 +33,7 @@ const TodoItemComponent = ({ todo }: Props) => {
 
   return (
     <div
-      className="flex justify-between items-center w-full p-2 border border-black"
+      className="flex justify-between items-center w-full p-2 border border-black flex-wrap"
       style={{backgroundColor: `${todo.color}`}}
     >
       <p>{todo.name}</p>
