@@ -1,6 +1,7 @@
 import { useAppDispatch } from "../hooks/redux";
 import { Todo } from "../redux/slices/todos";
 import { deleteTodo } from "../redux/slices/todos";
+import Swal from 'sweetalert2'
 
 interface Props {
   todo: Todo
@@ -10,7 +11,24 @@ const TodoItemComponent = ({ todo }: Props) => {
   const dispatch = useAppDispatch();
 
   const handleDelete = (id: string) => {
-    dispatch(deleteTodo(id))
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+        dispatch(deleteTodo(id))
+      }
+    })
   }
 
   return (

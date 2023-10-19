@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import idGenerator from "../helpers/idGenerator";
 import { useAppDispatch } from "../hooks/redux";
 import { addTodo } from "../redux/slices/todos";
+import Swal from 'sweetalert2'
 import axios from "axios";
 
 const FormComponent = () => {
@@ -24,6 +25,17 @@ const FormComponent = () => {
 
   const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (todoName === "") {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please enter a TODO name',
+      })
+      
+      return
+    }
+
     dispatch(
       addTodo({
         id: idGenerator(),
@@ -31,6 +43,14 @@ const FormComponent = () => {
         color: `#${todoColor}`,
       })
     );
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'TODO added successfully !',
+      showConfirmButton: false,
+      timerProgressBar: true,
+      timer: 1500
+    })
   };
 
   return (
