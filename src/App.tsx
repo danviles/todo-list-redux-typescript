@@ -1,10 +1,11 @@
-import React from "react";
-import FormComponent from "./components/FormComponent";
-import TodoListComponent from "./components/TodoListComponent";
+import FormComponent from './components/FormComponent';
+import TodoListComponent from './components/TodoListComponent';
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <header className="flex justify-center items-center mb-12">
         <h1 className="text-xl font-bold">Simple TODO List App</h1>
       </header>
@@ -16,7 +17,7 @@ const App = () => {
           <TodoListComponent />
         </section>
       </main>
-    </>
+    </Provider>
   );
 };
 
