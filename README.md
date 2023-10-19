@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Simple TODO List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Captura de pantalla de la aplicación](./src/assets/images/todosapp1.png)
 
-## Available Scripts
+Una aplicación web construida con React, Redux y TypeScript que permite agregar tareas pendientes a una lista.
 
-In the project directory, you can run:
+## Información Técnica
 
-### `npm start`
+### Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+La aplicación integra diversas tecnologías, dependencias como:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Axios](https://axios-http.com/): Para las peticiones a la API.
+- [Redux toolkit](https://reactjs.org/docs/context.html): Para el manejo del estado global de la aplicación.
+- [Tailwind CSS](https://tailwindcss.com/): Para el diseño y la implementación de la interfaz de usuario.
+- [formkit/auto-animate](https://auto-animate.formkit.com/#usage-react) y [sweetalert2](https://sweetalert2.github.io): Para agregar alertas y efectos en la lista.
 
-### `npm test`
+## Observaciones y dificultades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Decidí crear este proyecto desde cero utilizando la plantilla `npx create-react-app todo-list --template typescript`. Esta elección me brindó la oportunidad de poner nuevamente a prueba mis habilidades blandas al volver a leer la documentación de Redux y actualizarme en la sintaxis de Redux Toolkit. Aunque la tarea en sí resultó bastante sencilla, fue sumamente enriquecedora gracias a los conocimientos que adquirí.
 
-### `npm run build`
+Aunque no era un requisito inicial, mi plan es continuar trabajando en este proyecto para ampliar mis conocimientos y configurar Redux Persist para guardar la lista en el almacenamiento local.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para probar la aplicación localmente en modo de desarrollo, sigue estos pasos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clona el repositorio en tu máquina local.
+2. Ejecuta `npm install` en la raíz del proyecto para instalar todas las dependencias necesarias.
+3. Ejecuta `npm run start` para iniciar un servidor de desarrollo local. Se mostrará en la consola la dirección y el puerto para acceder a la aplicación.
 
-### `npm run eject`
+Para el modo de producción, sigue estos pasos:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Ejecuta `npm run build` para crear una versión de producción de la aplicación, minimizando y concatenando los recursos. Esto generará una carpeta 'dist' en el directorio raíz que podrás usar para el despliegue en producción (ver el apartado "Demo" más adelante).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo (Deploy)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Puedes encontrar una versión en vivo de la aplicación [aquí](https://fancy-beijinho-fd92e2.netlify.app).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Proyectos similares
 
-## Learn More
+- [Reproductor podcast personalizado - TypeScript](https://github.com/danviles/podcast-player)
+- [Top 100 podcast list](https://github.com/danviles/indi-podcast-player)
+- [Que diria Chuck Norris](https://github.com/danviles/ChuckSays)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autor
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Creado por [Elvis Nogueiras](https://github.com/danviles).
+
+Para cualquier pregunta o comentario, no dudes en contactarme a través de [LinkedIn](https://www.linkedin.com/in/elvis-nogueiras/).
+
+---
+
+© 2023 Elvis Nogueiras. Todos los derechos reservados.
+
+---
